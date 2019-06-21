@@ -1,0 +1,5 @@
+<form action='/search' method='get' role='search'>
+    <label class='label-hidden' for='Search'></label>
+    <input type='search' name='q' id='Search' value='{{ search.terms | escape }}' placeholder='Search'>
+    <button class='button' type='submit'>Search</button>
+</form>
