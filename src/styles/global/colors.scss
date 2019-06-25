@@ -1,0 +1,34 @@
+:root {
+    --black: #262c4d;
+    --white: #fff;
+    --green: #a4e1b9;
+    --blue: #344fda;
+}
+
+.c-white {
+    color: var(--white);
+}
+.bg-white {
+    background-color: var(--white);
+}
+
+.c-black {
+    color: var(--black);
+}
+.bg-black {
+    background-color: var(--black);
+}
+
+.c-green {
+    color: var(--green);
+}
+.bg-green {
+    background-color: var(--green);
+}
+
+.c-blue {
+    color: var(--blue);
+}
+.bg-blue {
+    background-color: var(--blue);
+}
