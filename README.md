@@ -72,11 +72,11 @@ Little re-usable bits of liquid.
 
 ## Working with JavaScript
 
-This base template utilizes of a small library called [PicoApp](https://github.com/estrattonbailey/picoapp) to help organize your JS into components and easily maintain a global state. Please read through PicoApp's documentation before startig to work with the JavaScript.
+This base template utilizes a small library called [PicoApp](https://github.com/estrattonbailey/picoapp) to help organize your JS into components and easily maintain a global state. Please read through PicoApp's documentation before starting to work with the JavaScript.
 
 ## Working with SCSS
 
-This base template uses SCSS rather than plain CSS. The main css file is appropriately called main.scss. It is imported into the index.js so that livereload can function properly. Feel free to add as many SCSS files as you like. Just import them into main.scss so that they get compiled correctly.
+This base template uses SCSS rather than plain CSS. The main scss file is appropriately called main.scss. It is imported into the index.js so that livereload can function properly. Feel free to add as many SCSS files as you like. Just import them into main.scss so that they get compiled correctly.
 
 ## Feedback
 
