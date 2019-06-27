@@ -1,0 +1,7 @@
+.cart-drawer-outer {
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+}
