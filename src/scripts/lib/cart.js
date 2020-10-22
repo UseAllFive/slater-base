@@ -21,14 +21,13 @@ export function addVariant(variant, quantity) {
     })
 }
 
-export function updateAddon(id, quantity) {
-    return fetchCart().then(({ items }) => {
-        for (let i = 0; i < items.length; i++) {
-            if (items[i].variant_id === parseInt(id)) {
-                return changeAddon(i + 1, quantity) // shopify cart is a 1-based index
-            }
+export async function updateAddon(id, quantity) {
+    const { items } = await fetchCart()
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].variant_id === parseInt(id)) {
+            return changeAddon(i + 1, quantity) // shopify cart is a 1-based index
         }
-    })
+    }
 }
 
 export function removeAddon(id) {
