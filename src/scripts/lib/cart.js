@@ -21,6 +21,30 @@ export function addVariant(variant, quantity) {
     })
 }
 
+export function updateCartItems(updates) {
+    // Update cart's line item quantities, note, or attributes
+    // More info: https://shopify.dev/docs/themes/ajax-api/reference/cart#post-cart-update-js
+
+    app.emit('cart:updating')
+
+    return fetch('/cart/update.js', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ updates: updates }),
+    })
+        .then((r) => r.json())
+        .then((result) => {
+            return fetchCart().then((cart) => {
+                app.hydrate({ cart: cart })
+                app.emit('cart:updated')
+                return { cart }
+            })
+        })
+}
+
 export async function updateAddon(id, quantity) {
     const { items } = await fetchCart()
     for (let i = 0; i < items.length; i++) {
